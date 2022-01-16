@@ -4,7 +4,9 @@
   "description": "glo graduation project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode=production",
+    "watch": "webpack --watch --mode=development",
+    "start": "webpack serve --mode=development --open"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/Shevrin/Glo-Electric/issues"
   },
-  "homepage": "https://github.com/Shevrin/Glo-Electric#readme"
+  "homepage": "https://github.com/Shevrin/Glo-Electric#readme",
+  "devDependencies": {
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
+  }
 }
