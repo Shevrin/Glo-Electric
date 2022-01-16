@@ -24,11 +24,9 @@ export const modal = () => {
 				callback.style.opacity = 0 + progress
 			}
 		})
-
-
 	}
-	const closeModal = () => {
 
+	const closeModal = () => {
 		animate({
 			duration: 130,
 			timing(timeFraction) {
