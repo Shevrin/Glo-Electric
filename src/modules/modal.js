@@ -2,7 +2,8 @@ import { animate } from "./helper"
 
 export const modal = () => {
 
-	const callbackBtn = document.querySelectorAll('.callback-btn')
+	const callbackBtns = document.querySelectorAll('.callback-btn')
+	const servicesBtn = document.querySelector('.button-services')
 	const overlay = document.querySelector('.modal-overlay')
 	const callback = document.getElementById('callback')
 	const body = document.querySelector('body')
@@ -10,7 +11,6 @@ export const modal = () => {
 	const openModal = () => {
 		overlay.style.display = 'block'
 		callback.style.display = 'block'
-
 		overlay.style.opacity = 0
 		callback.style.opacity = 0
 
@@ -46,9 +46,10 @@ export const modal = () => {
 		})
 	}
 
-	callbackBtn.forEach(item => item.addEventListener('click', openModal))
+	callbackBtns.forEach(item => item.addEventListener('click', openModal))
+	servicesBtn.addEventListener('click', openModal)
+
 	body.addEventListener('click', (e) => {
-		console.log(e.target);
 		if (e.target.className === 'modal-overlay' || e.target.closest('.modal-close')) {
 			closeModal()
 		}
