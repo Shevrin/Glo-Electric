@@ -1,0 +1,24 @@
+{
+  "name": "glo_electric",
+  "version": "1.0.0",
+  "description": "glo graduation project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shevrin/Glo-Electric.git"
+  },
+  "keywords": [
+    "glo",
+    "js",
+    "css"
+  ],
+  "author": "Pavel Shevrin <vestax747@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shevrin/Glo-Electric/issues"
+  },
+  "homepage": "https://github.com/Shevrin/Glo-Electric#readme"
+}
