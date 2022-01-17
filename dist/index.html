@@ -13,7 +13,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <meta name="author" content="Команда разработчиков collary.ru" />
-    <meta name="copyright" content="© collary.ru, дизайн и разработка, 2018" />
+    <meta name="copyright" content="© collary.ru, дизайн и разработка, 2022" />
     <link rel="icon" type="image/png" href="favicon.png" />
 
     <!-- STYLESHEETS :: FONTS -->
@@ -54,7 +54,7 @@
         <div class="header-panel">
           <div class="container">
             <div class="shedule left hidden-xs">
-              г. Севастополь, ул. Пожарова, 18.
+              г. Севастополь, ул. Пожарова, 22.
             </div>
             <div class="h-panel-right right">
               <span class="header-email">
@@ -582,8 +582,8 @@
                 <div class="icon hidden-sm">
                   <img src="images/address-icon.png" />
                 </div>
-                г. Ваш город, <br />
-                ул. Ленина д. 3, офис 302
+                г. Севастополь, <br />
+                ул. Пожарова д. 22
               </div>
             </div>
             <div class="col-sm-4">
@@ -620,16 +620,15 @@
         <script type="text/javascript">
           ymaps.ready(function () {
             var mapexMap = new ymaps.Map("mapexMap", {
-                center: [44.84373337182117, 37.65565927116387], // центр карты
+                center: [44.603616, 33.504447], // центр карты
                 zoom: 16, // масштаб
                 controls: ["zoomControl"],
               }),
               myPlacemark = new ymaps.Placemark(
-                [44.84373337182117, 37.65565927116387], // координаты маркера
+                [44.603616, 33.504447], // координаты маркера
                 {
                   iconContent: "",
-                  balloonContentBody:
-                    "г. Ваш город, Проспект Дзержинского д. 211",
+                  balloonContentBody: "г. Севастополь, ул. Пожарова д. 22",
                   balloonContentHeader: "",
                 }, // контент маркера
                 {
@@ -658,7 +657,7 @@
     <!-- * * * * * * Footer * * * * * * -->
     <div class="footer-wrapper">
       <div class="container text-center f13">
-        © 2018. Шаблон сайта электрика. Разработано в
+        © 2022. Шаблон сайта электрика. Разработано в
         <a href="http://collary.ru">collary.ru</a>
       </div>
     </div>
