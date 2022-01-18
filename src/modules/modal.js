@@ -8,7 +8,8 @@ export const modal = () => {
 	const callback = document.getElementById('callback')
 	const body = document.querySelector('body')
 
-	const openModal = () => {
+	const openModal = (e) => {
+		e.preventDefault()
 		overlay.style.display = 'block'
 		callback.style.display = 'block'
 		overlay.style.opacity = 0
@@ -48,6 +49,7 @@ export const modal = () => {
 	servicesBtn.addEventListener('click', openModal)
 
 	body.addEventListener('click', (e) => {
+		e.preventDefault()
 		if (e.target.className === 'modal-overlay' || e.target.closest('.modal-close')) {
 			closeModal()
 		}

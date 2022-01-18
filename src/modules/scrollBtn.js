@@ -7,7 +7,7 @@ export const scrollBtn = () => {
 	const toBlock = document.getElementById('scroll-1')
 
 	window.addEventListener('scroll', () => {
-		if (window.pageYOffset > 2495) {
+		if (window.pageYOffset > 500) {
 			upBtn.style.display = 'block'
 		} else {
 			upBtn.style.display = 'none'
