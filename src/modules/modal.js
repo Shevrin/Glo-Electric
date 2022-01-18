@@ -1,13 +1,22 @@
 import { animate } from "./helper"
+import sendData from "./fetch"
 
 export const modal = () => {
-
+	// элементы DOM
 	const callbackBtns = document.querySelectorAll('.callback-btn')
 	const servicesBtn = document.querySelector('.button-services')
 	const overlay = document.querySelector('.modal-overlay')
 	const callback = document.getElementById('callback')
+	const form = callback.querySelector('form')
+	const formInputs = form.querySelectorAll('.form-control')
+	const inputPhone = document.querySelector('input[name="tel"]')
 	const body = document.querySelector('body')
-
+	// новый элемент DOM: статус отправки  
+	const statusBlock = document.createElement('div')
+	const loadText = 'Идет отправка...'
+	const errorText = 'Ошибка!'
+	const successText = 'Отправлено'
+	// функционал
 	const openModal = (e) => {
 		e.preventDefault()
 		overlay.style.display = 'block'
@@ -28,6 +37,12 @@ export const modal = () => {
 	}
 
 	const closeModal = () => {
+		formInputs.forEach(item => {
+			item.value = ''
+			item.classList.remove('error')
+			item.classList.remove('success')
+			statusBlock.innerHTML = ''
+		})
 		animate({
 			duration: 130,
 			timing(timeFraction) {
@@ -45,13 +60,46 @@ export const modal = () => {
 		})
 	}
 
+	const submitForm = () => {
+		form.append(statusBlock)
+		const formData = new FormData(form)
+		const formBody = {}
+		formData.forEach((val, key) => {
+			formBody[key] = val
+		})
+		statusBlock.innerHTML = loadText
+		sendData(formBody)
+			.then((data) => {
+				console.log(data)
+				statusBlock.innerHTML = successText
+			})
+			.catch(err => {
+				console.log('err')
+				statusBlock.innerHTML = errorText
+			})
+			.finally(() => {
+				formInputs.forEach(item => {
+					item.value = ''
+					item.classList.remove('error')
+					item.classList.remove('success')
+				})
+			})
+
+	}
+	// подписка на события
 	callbackBtns.forEach(item => item.addEventListener('click', openModal))
 	servicesBtn.addEventListener('click', openModal)
-
 	body.addEventListener('click', (e) => {
 		e.preventDefault()
 		if (e.target.className === 'modal-overlay' || e.target.closest('.modal-close')) {
 			closeModal()
 		}
+		if (e.target.classList.contains('feedback') && inputPhone.classList.contains('success')) {
+			submitForm()
+			// closeModal()
+		}
 	})
 }
+
+
+
