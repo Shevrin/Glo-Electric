@@ -5,6 +5,8 @@ export const modal = () => {
 	// элементы DOM
 	const callbackBtns = document.querySelectorAll('.callback-btn')
 	const servicesBtn = document.querySelector('.button-services')
+	const container = document.querySelector('.services-elements')
+	const services = container.querySelectorAll('.element')
 	const overlay = document.querySelector('.modal-overlay')
 	const callback = document.getElementById('callback')
 	const form = callback.querySelector('form')
@@ -89,6 +91,7 @@ export const modal = () => {
 	// подписка на события
 	callbackBtns.forEach(item => item.addEventListener('click', openModal))
 	servicesBtn.addEventListener('click', openModal)
+	services.forEach(service => service.addEventListener('click', openModal))
 	body.addEventListener('click', (e) => {
 		e.preventDefault()
 		if (e.target.className === 'modal-overlay' || e.target.closest('.modal-close')) {
