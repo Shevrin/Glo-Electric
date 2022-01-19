@@ -1,5 +1,5 @@
 const sendData = (data) => {
-	return fetch('../../server.php', {
+	return fetch('https://jsonplaceholder.typicode.com/posts', {
 		method: 'POST',
 		body: JSON.stringify(data),
 		headers: {
