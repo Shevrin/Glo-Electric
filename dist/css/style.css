@@ -1232,4 +1232,9 @@ video#video_background {
 		clear: both;
 	}
 }
+
+
+/* input:valid {
+  border-color: green;
+} */
 /**** /. services section *****/
