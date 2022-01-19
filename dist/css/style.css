@@ -932,8 +932,8 @@ video#video_background {
 		height: 520px;
 	}
 	.top-slider .table {
-		opacity: 1;
-		visibility: visible;
+		opacity: 0;
+		visibility: hidden;
 		-webkit-transform: scale(1.5);
 		-ms-transform: scale(1.5);
 		-o-transform: scale(1.5);
