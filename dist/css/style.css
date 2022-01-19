@@ -648,7 +648,7 @@ a.absolute {
 }
 .num-section .container {
 	position: relative;
-	z-index: 10;
+	z-index: 100;
 }
 .num-section .num {
 	font-size: 50px;
@@ -869,7 +869,7 @@ hr.white {
 }
 .top-slider .table {
 	position: relative;
-	z-index: 10;
+	z-index: 100;
 }
 .video-block {
 	height: 100%;
@@ -932,8 +932,8 @@ video#video_background {
 		height: 520px;
 	}
 	.top-slider .table {
-		opacity: 0;
-		visibility: hidden;
+		opacity: 1;
+		visibility: visible;
 		-webkit-transform: scale(1.5);
 		-ms-transform: scale(1.5);
 		-o-transform: scale(1.5);
