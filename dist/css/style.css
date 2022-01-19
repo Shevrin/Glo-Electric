@@ -4,6 +4,7 @@
 @import url(jquery.fancybox.css);
 @import url(lightgallery.min.css);
 @import url(settings.css);
+/* @import 'swiper/css'; */
 body {
 	font-size: 16px;
 	line-height: 1.6;
@@ -1210,6 +1211,8 @@ video#video_background {
 	font-weight: bold;
 	color: #2fab6d;
 }
+
+
 
 .up {
 	position: fixed;

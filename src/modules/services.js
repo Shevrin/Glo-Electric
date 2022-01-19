@@ -1,3 +1,5 @@
+import slider from "./slider"
+
 export const services = () => {
 	const container = document.querySelector('.services-elements')
 	const services = container.querySelectorAll('.element')
@@ -5,7 +7,7 @@ export const services = () => {
 	// const tabs = document.querySelectorAll('.service-header-tab')
 	// console.log(services);
 
-
+	slider()
 
 	// tabPanel.addEventListener('click', (e) => {
 	// 	if (e.target.closest('.service-header-tab')) {
