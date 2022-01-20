@@ -1,0 +1,35 @@
+{
+  "name": "glo_electric",
+  "version": "1.0.0",
+  "description": "glo graduation project",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "watch": "webpack --watch --mode=development",
+    "start": "webpack serve --mode=development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shevrin/Glo-Electric.git"
+  },
+  "keywords": [
+    "glo",
+    "js",
+    "css"
+  ],
+  "author": "Pavel Shevrin <vestax747@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shevrin/Glo-Electric/issues"
+  },
+  "homepage": "https://github.com/Shevrin/Glo-Electric#readme",
+  "devDependencies": {
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
+  },
+  "dependencies": {
+    "color-print": "^1.0.2",
+    "swiper": "^7.4.1"
+  }
+}
