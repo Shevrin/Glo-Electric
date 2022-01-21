@@ -10,6 +10,7 @@ export const sliderMain = () => {
 
 	const prevSlide = (elems, index, display) => {
 		elems[index].style.display = display
+		elems[index].style.opacity = 0
 	}
 
 	const nextSlide = (elems, index, display) => {
