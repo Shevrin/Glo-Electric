@@ -7,6 +7,8 @@ const slider = () => {
 		{
 			slidesPerView: 3,
 			loop: true,
+			loopedSlides: 3,
+			freeMode: true,
 			navigation: {
 				nextEl: '.arrow-right',
 				prevEl: '.arrow-left',
